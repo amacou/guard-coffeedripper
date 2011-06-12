@@ -1,0 +1,3 @@
+app.coffee:
+  - hoge.bean
+  - huga.bean
