@@ -31,12 +31,14 @@ module Guard
     end
 
     def drip_all
+      puts "Drip Start for All"
       @config.each do |coffee, beans|
         drip(coffee)
       end
     end
 
     def drip(coffee_script)
+      puts "Drip Start for #{coffee_script}"
       beans = @config[coffee_script]
       output = File.join Dir.pwd, @options[:output], coffee_script
       str = ""
@@ -44,6 +46,7 @@ module Guard
         str += load_bean(bean)
       end
       write(output, str)
+      puts "Dripped End #{output}"
     end
 
     def load_bean(bean)
