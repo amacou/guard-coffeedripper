@@ -1,0 +1,23 @@
+# -*- encoding: utf-8 -*-
+$:.push File.expand_path('../lib', __FILE__)
+require 'guard/coffeedripper/version'
+
+Gem::Specification.new do |s|
+  s.name = 'guard-coffeedripper'
+  s.version = Guard::CoffeeDripperVersion::VERSION
+  s.platform = Gem::Platform::RUBY
+  s.authors = ['amacou']
+  s.email = ['amacou.abf@gmail.com']
+  s.homepage = 'http://github.com/amacou/guard-coffeedripper'
+  s.summary = 'Guard gem for Marge CoffeeScript'
+  s.description = 'Guard::CoffeeDripper automatically generates your coffescript from your parts of coffee'
+
+  s.required_rubygems_version = '>= 1.3.6'
+  s.add_dependency 'guard', '>= 0.4'
+  s.add_development_dependency 'bundler', '~> 1.0'
+  s.add_development_dependency 'rspec', '~> 2.6'
+
+  s.files = Dir.glob('{lib}/**/*') + %w[LICENSE README.md]
+  s.require_path = 'lib'
+end
+
