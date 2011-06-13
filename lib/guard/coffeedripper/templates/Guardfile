@@ -1,3 +1,3 @@
 guard 'coffeedripper' do
-  watch(%r{^app/coffeescripts/(.+)\.bean$})
+  watch(%r{^app/coffeescripts/(.+)\.bean$}) {|m| "#{m[1]}.bean"}
 end
