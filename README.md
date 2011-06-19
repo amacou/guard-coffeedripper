@@ -1,6 +1,6 @@
 Guard::CoffeeDripper
 ====
-Guard::CoffeeDripper is MargeTool for CoffeeScript
+Guard::CoffeeDripper is MergeTool for CoffeeScript
 
 Install
 ----
@@ -8,7 +8,7 @@ Install the gem:
 
     gem install guard-coffeedripper
 
-Add it to your Gemfile (inside test group):
+Add it to your Gemfile (inside develop group):
 
     gem 'guard-coffeedripper'
 
