@@ -1,12 +1,12 @@
 #
 # example  for coffeedripper and barista
 #
-guard 'coffeedripper'  do
+guard 'coffeedripper' do
   watch(%r{^app/coffeescripts/(.+)\.bean$}) {|m| "#{m[1]}.bean"}
 end
 #
 # example for coffeedripper and rails3.1
 #
-guard 'coffeedripper', :output => 'app/assets/javascripts/' do
-  watch(%r{^app/assets/javascripts/(.+)\.bean$}) {|m| "#{m[1]}.bean"}
-end
+# guard 'coffeedripper', :output => 'app/assets/javascripts/', :input => 'app/assets/javascripts/' do
+  # watch(%r{^app/assets/javascripts/(.+)\.bean$}) {|m| "#{m[1]}.bean"}
+# end

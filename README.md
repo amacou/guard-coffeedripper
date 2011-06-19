@@ -22,13 +22,13 @@ Usage
 Please read Guard usage doc
 Guardfile for Rails3.0 and barista
 
-    guard 'coffeedripper', :output => 'app/coffscripts/'  do
+    guard 'coffeedripper', :output => 'app/coffscripts/', :input => 'app/coffeescripts'  do
       watch(%r{^app/coffeescripts/(.+)\.bean$}) {|m| "#{m[1]}.bean"}
     end
 
 or Rails3.1
 
-    guard 'coffeedripper', :output => 'app/assets/javascripts/' do
+    guard 'coffeedripper', :output => 'app/assets/javascripts/', :input => 'app/assets/javascripts/' do
       watch(%r{^app/assets/javascripts/(.+)\.bean$}) {|m| "#{m[1]}.bean"}
     end
 
