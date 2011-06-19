@@ -1,0 +1,12 @@
+################
+# Example
+# application.js.cofee and hoge.coffee is output file name
+# part1.bean, part2.bean part3.bean is input filename writen by coffeescript
+################
+# application.js.coffee:
+#   - part1.bean
+#   - part2.bean
+# ho.js.coffee
+#   - part1.bean
+#   - part3.bean
+

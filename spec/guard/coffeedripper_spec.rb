@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe Guard::CoffeeDripper do
   subject { Guard::CoffeeDripper.new }
-
   describe "#initialize" do
     it "should set default output path" do
       subject.options[:output].should == 'app/coffeescripts/'
@@ -13,11 +12,11 @@ describe Guard::CoffeeDripper do
     end
 
     it "should set default ext" do
-      subject.options[:ext].should == 'coffeebean'
+      subject.options[:ext].should == 'bean'
     end
 
     it "should set default config path" do
-      subject.options[:config].should == 'config/coffeedripper.yaml'
+      subject.options[:config].should == 'config/coffee-dripper.yaml'
     end
     describe "load conifg" do
       it "is success" do
