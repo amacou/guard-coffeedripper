@@ -6,13 +6,23 @@ module Guard
   class CoffeeDripper < Guard
 
     attr_accessor :config
+    def self.init(guard_name = nil)
+      if !File.exist?("config/coffeedripper.yaml")
+        puts "Writing new Guardfile to #{Dir.pwd}/config/coffee-dripper.yaml"
+        FileUtils.cp(File.expand_path('../coffeedripper/templates/coffee-dripper.yaml', __FILE__), 'config/coffee-dripper.yaml')
+      elsif guard_name.nil?
+        ::Guard::UI.error "Guardfile already exists at #{Dir.pwd}/config/coffee-dripper.yaml"
+        exit 1
+      end
+    end
+
     def initialize(watchers=[], options={})
       super
       @watchers, @options = watchers, options
       @options[:output] ||= 'app/coffeescripts/'
       @options[:input] ||= 'app/coffeescripts/'
-      @options[:ext] ||= 'coffeebean'
-      @options[:config] ||= 'config/coffeedripper.yaml'
+      @options[:ext] ||= 'bean'
+      @options[:config] ||= 'config/coffee-dripper.yaml'
       load_config
     end
 
@@ -46,7 +56,7 @@ module Guard
         str += load_bean(bean)
       end
       write(output, str)
-      puts "Dripped End #{output}"
+      puts "Drip End #{output}"
     end
 
     def load_bean(bean)
