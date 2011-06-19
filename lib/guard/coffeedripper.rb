@@ -7,6 +7,7 @@ module Guard
 
     attr_accessor :config
     def self.init(guard_name = nil)
+      super(guard_name)
       if !File.exist?("config/coffeedripper.yaml")
         puts "Writing new Guardfile to #{Dir.pwd}/config/coffee-dripper.yaml"
         FileUtils.cp(File.expand_path('../coffeedripper/templates/coffee-dripper.yaml', __FILE__), 'config/coffee-dripper.yaml')
