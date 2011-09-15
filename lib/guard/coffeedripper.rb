@@ -20,8 +20,8 @@ module Guard
     def initialize(watchers=[], options={})
       super
       @watchers, @options = watchers, options
-      @options[:output] ||= 'app/coffeescripts/'
-      @options[:input] ||= 'app/coffeescripts/'
+      @options[:output] ||= 'app/assets/'
+      @options[:input] ||= 'app/beans/'
       @options[:ext] ||= 'bean'
       @options[:config] ||= 'config/coffee-dripper.yaml'
       load_config
